@@ -3,9 +3,9 @@ import { connect } from 'dva';
 import { Components } from 'eccom-framework';
 import AuthConfig from '@/components/pages/module/AuthConfig';
 
-const { Layouts: { BasicLayout } } = Components;
+const { Layouts: { withBasicLayout } } = Components;
 
-@BasicLayout({
+@withBasicLayout({
     pageName: 'Template3',
     narrow: true,
     authConfig: {

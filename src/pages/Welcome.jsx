@@ -1,28 +1,22 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Link } from 'react-router-dom';
 import { Components } from 'eccom-framework';
 import AuthConfig from '@/components/pages/module/AuthConfig';
 
-const { Layouts: { AuthPage, BasicLayout } } = Components;
+import styles from './index.less';
 
-// const Template = (props) => {
-//     return <AuthPage title={"Template4"}
-//         url={AuthConfig.Url}
-//         docDefId={AuthConfig.DocDefId}
-//         objectId={''}
-//         actionType={AuthConfig.ActionType[0]}>
-//         Template
-//     </AuthPage>;
-// };
+const { Layouts: { withBasicLayout, withBlankLayout } } = Components;
 
-@BasicLayout({
-    moduleName: "模块",
-    pageName: 'Welcome',
-    narrow: true
+@withBlankLayout({
+    pageName: 'Welcome'
 })
 class Template extends React.Component {
     render() {
-        return <div>Welcome</div>;
+        return <div className={styles.container}>
+            <div className={styles.welcome}>Welcome</div>
+            <Link className={styles.link} to={'/module1/page0'}>Sample Pages</Link>
+        </div>;
     }
 }
 

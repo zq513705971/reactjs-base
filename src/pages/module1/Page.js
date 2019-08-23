@@ -4,9 +4,11 @@ import { connect } from 'dva';
 import { Components } from 'eccom-framework';
 import AuthConfig from '@/components/pages/module/AuthConfig';
 
-const { Layouts: { AuthPage, BasicLayout } } = Components;
+import styles from './index.less';
 
-@BasicLayout({
+const { Layouts: { withBasicLayout } } = Components;
+
+@withBasicLayout({
     pageName: 'Template',
     narrow: true,
     authConfig: {
@@ -15,7 +17,10 @@ const { Layouts: { AuthPage, BasicLayout } } = Components;
 })
 class Template extends React.Component {
     render() {
-        return <div><Link to={'/module1/page2/template4'}>HideInMenu</Link></div>;
+        return <div className={styles.container}>
+            <Link to={'/index'}>Welcome</Link>
+            <Link to={'/module1/page2/template4'}>HideInMenu</Link>
+        </div>;
     }
 }
 
