@@ -6,18 +6,24 @@ import AuthConfig from '@/components/pages/module/AuthConfig';
 
 import styles from './index.less';
 
-const { Layouts: { withBasicLayout, withBlankLayout } } = Components;
+const {
+  Layouts: { withBasicLayout, withBlankLayout },
+} = Components;
 
 @withBlankLayout({
-    pageName: 'Welcome'
+  pageName: 'Welcome',
 })
 class Template extends React.Component {
-    render() {
-        return <div className={styles.container}>
-            <div className={styles.welcome}>Welcome</div>
-            <Link className={styles.link} to={'/module1/page0'}>Sample Pages</Link>
-        </div>;
-    }
+  render() {
+    return (
+      <div className={styles.container}>
+        <div className={styles.welcome}>Welcome</div>
+        <Link className={styles.link} to="/module1/page0">
+          Sample Pages
+        </Link>
+      </div>
+    );
+  }
 }
 
 export default Template;
