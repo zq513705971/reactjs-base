@@ -88,9 +88,9 @@ yarn link 'eccom-framework'
 模块路由名称定义为`routes.config.js`,路径为各模块的根路径下。如
 
 ```
-    -pages
-        -module1    //模块1
-            routes.config.js
+-pages
+    -module1    //模块1
+        routes.config.js
 ```
 
 ```
