@@ -34,22 +34,22 @@
 ### 2.2 安装方法
 
 - 下载模板和组件库
-  > 模板库
 
 ```
+# 模板库
 git clone http://192.168.246.162/erpcloudnet/ui/eccom-template.git eccom-project
 ```
 
-> 组件库
-
 ```
+# 组件库
 git clone http://192.168.246.162/erpcloudnet/ui/eccom-framework.git
 ```
 
 `eccom-project`为项目名称
 
 - 安装
-  > 创建组件库链接
+
+> 创建组件库链接
 
 ```
 # 进入项目eccom-framework
