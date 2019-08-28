@@ -1,24 +1,10 @@
 import React, { useEffect } from 'react';
-import { Divider, ConfigProvider } from 'antd';
 import { connect } from 'dva';
-import memoizeOne from 'memoize-one';
-import pathToRegexp from 'path-to-regexp';
-import router from 'umi/router';
-import isEqual from 'lodash/isEqual';
-import DocumentTitle from 'react-document-title';
-import { getPageTitle } from '@ant-design/pro-layout';
 import { formatMessage } from 'umi-plugin-react/locale';
-import { Components, Utils } from 'eccom-framework';
 import routesConfig from '../../config/routes.config';
 import defaultSettings from '../../config/defaultSettings';
 
 import styles from './BasicLayout.less';
-
-const {
-  utils: { matchParamsPath, getCurrentRoutePaths },
-} = Utils;
-const { Layouts } = Components;
-const { Container, Header, Body, Footer } = Layouts;
 
 const BasicLayout = props => {
   const {

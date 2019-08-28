@@ -8,6 +8,7 @@ import styles from './index.less';
 
 const {
   Layouts: { withBasicLayout },
+  SelectFields: { SelectFieldOffice, SelectFieldEmployeeTypes, SelectFieldPersonTypes },
 } = Components;
 
 @withBasicLayout({
@@ -26,6 +27,15 @@ class Template extends React.Component {
         </div>
         <div>
           <Link to="/module1/page2/template3">HideInMenu</Link>
+        </div>
+        <div>
+          <SelectFieldOffice />
+        </div>
+        <div>
+          <SelectFieldEmployeeTypes />
+        </div>
+        <div>
+          <SelectFieldPersonTypes />
         </div>
       </div>
     );
