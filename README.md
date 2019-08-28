@@ -35,10 +35,14 @@
 
 - 下载模板和组件库
 
+> 模板库
+
 ```
 # 模板库
 git clone http://192.168.246.162/erpcloudnet/ui/eccom-template.git eccom-project
 ```
+
+> 组件库
 
 ```
 # 组件库
@@ -56,7 +60,8 @@ git clone http://192.168.246.162/erpcloudnet/ui/eccom-framework.git
 cd eccom-framework
 # 安装依赖
 yarn
-或者 npm install
+# 或者
+npm install
 # 创建链接
 yarn link
 ```
@@ -68,9 +73,18 @@ yarn link
 cd eccom-project
 # 安装依赖
 yarn
-或者 npm install
+# 或者
+npm install
 # 链接组件库
 yarn link 'eccom-framework'
+```
+
+> 运行 eccom-project
+
+```
+yarn dev
+# 或者
+npm run dev
 ```
 
 ### 2.3 规范要求
