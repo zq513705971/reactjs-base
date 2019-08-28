@@ -21,8 +21,12 @@ class Template extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Link to="/index">Welcome</Link>
-        <Link to="/module1/page2/template3">HideInMenu</Link>
+        <div>
+          <Link to="/index">Welcome</Link>
+        </div>
+        <div>
+          <Link to="/module1/page2/template3">HideInMenu</Link>
+        </div>
       </div>
     );
   }
