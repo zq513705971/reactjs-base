@@ -119,6 +119,9 @@ import module1Routes from '@/pages/module1/routes.config';
 使用方法：
 
 ```
+# 空布局
+@withBlankLayout
+
 # 固定综合导航栏
 @withFixedNavbarLayout
 
@@ -132,10 +135,12 @@ import module1Routes from '@/pages/module1/routes.config';
 # 弹出式综合导航栏
 # 宽版
 # 页面名称为Template2
+# 显示页面标题
 # 页面需要进行权限验证
 @withBasicLayout({
   pageName: 'Template2',
   narrow: false,
+  titleHidden: false,
   authConfig: {
     ...AuthConfig,
   },
