@@ -27,6 +27,32 @@ module.exports = [
             icon: 'tag',
             component: './module1/page1/Template2',
           },
+          {
+            path: '/module1/page1/template3',
+            name: 'template3',
+            icon: 'tag',
+            routes: [
+              {
+                path: '/module1/page1/template3/subpage1',
+                name: 'subpage',
+                icon: 'tag',
+                component: './module1/page1/subPages/Template',
+              },
+              {
+                path: '/module1/page1/template3/subpage2',
+                name: 'subpage',
+                icon: 'tag',
+                routes: [
+                  {
+                    path: '/module1/page1/template3/subpage2/subpage',
+                    name: 'subpage',
+                    icon: 'tag',
+                    component: './module1/page1/subPages/Template',
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {

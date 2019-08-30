@@ -44,6 +44,9 @@ class Template extends React.Component {
         <div className={styles.item}>
           <InputFieldPersonMulti allowClear value="wwz;jacky" />
         </div>
+        <div className={styles.item}>
+          <InputFieldPersonMulti allowClear value="ZhanQun82608" />
+        </div>
       </div>
     );
   }

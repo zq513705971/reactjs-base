@@ -34,6 +34,9 @@ const BasicLayout = props => {
       });
     }
   }, []);
+
+  console.log('BasicLayout', props);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
