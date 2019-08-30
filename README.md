@@ -33,13 +33,18 @@
 
 ### 2.2 安装方法
 
-- 下载模板和组件库
+- 下载项目模板和组件库
 
-> 模板库
+> 项目模板
 
 ```
-# 模板库
+# 下载项目模板
 git clone http://192.168.246.162/erpcloudnet/ui/eccom-template.git eccom-project
+# 删除远程仓库地址
+cd eccom-project
+git remote rm origin
+# 添加新的远程仓库地址
+git remote add origin http://192.168.246.162/erpcloudnet/ui/eccom-project.git
 ```
 
 > 组件库
