@@ -1,9 +1,6 @@
-import defaultSettings from './defaultSettings'; // https://umijs.org/config/
-
 import slash from 'slash2';
 import webpackPlugin from './plugin.config';
 import routesConfig from './routes.config';
-const { primaryColor } = defaultSettings;
 
 const { API_ENV } = process.env;
 
@@ -51,9 +48,6 @@ export default {
   },
   devtool: false,
   routes: routesConfig,
-  theme: {
-    'primary-color': primaryColor,
-  },
   define: {
     'process.env': {
       API_ENV: API_ENV,
