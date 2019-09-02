@@ -6,6 +6,7 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
     "dev": "umi dev",
+    "devX": "cross-env API_ENV=dev umi dev",
     "build": "umi build",
     "build:dev": "cross-env API_ENV=dev umi build",
     "build:pro": "cross-env API_ENV=pro umi build",

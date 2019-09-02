@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
 import { connect } from 'dva';
 import { formatMessage } from 'umi-plugin-react/locale';
+import { Utils } from 'eccom-framework';
 import routesConfig from '../../config/routes.config';
 import defaultSettings from '../../config/defaultSettings';
 
 import styles from './BasicLayout.less';
+
+const {
+  utils: { log },
+} = Utils;
 
 const BasicLayout = props => {
   const {
@@ -35,7 +40,7 @@ const BasicLayout = props => {
     }
   }, []);
 
-  console.log('BasicLayout', props);
+  log('BasicLayout', props);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
