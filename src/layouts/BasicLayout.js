@@ -24,9 +24,9 @@ const BasicLayout = props => {
       dispatch({
         type: 'user/fetchCurrent',
       });
-      dispatch({
-        type: 'user/refreshToken',
-      });
+      // dispatch({
+      //   type: 'user/refreshToken',
+      // });
       dispatch({
         type: 'settings/getMenuData',
         payload: {

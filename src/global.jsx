@@ -13,8 +13,16 @@ const {
  * 初始化环境
  */
 const cookies = new Cookies();
-cookies.set(DOMAIN_PATH_KEY, defaultSettings[DOMAIN_PATH_KEY]);
-cookies.set(REDIRECT_LOGIN_URL_KEY, defaultSettings[REDIRECT_LOGIN_URL_KEY]);
+const DOMAIN_PATH = defaultSettings[DOMAIN_PATH_KEY];
+const REDIRECT_LOGIN_URL = defaultSettings[REDIRECT_LOGIN_URL_KEY];
+cookies.set(DOMAIN_PATH_KEY, DOMAIN_PATH, {
+  domain: DOMAIN_PATH,
+  path: '/',
+});
+cookies.set(REDIRECT_LOGIN_URL_KEY, REDIRECT_LOGIN_URL, {
+  domain: DOMAIN_PATH,
+  path: '/',
+});
 
 if ('serviceWorker' in navigator) {
   // eslint-disable-next-line compat/compat
