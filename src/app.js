@@ -1,4 +1,4 @@
-import { Utils } from 'eccom-framework';
+import { Utils } from 'eccom-framework-web';
 
 const { utils } = Utils;
 

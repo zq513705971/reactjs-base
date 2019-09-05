@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'dva';
-import { Components } from 'eccom-framework';
+import { Components } from 'eccom-framework-web';
 import AuthConfig from '@/components/pages/module/AuthConfig';
 
 import styles from './index.less';

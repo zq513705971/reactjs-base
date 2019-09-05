@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, message, notification } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
 import { withCookies, Cookies, useCookies } from 'react-cookie';
-import { Configs } from 'eccom-framework';
+import { Configs } from 'eccom-framework-web';
 import defaultSettings from '../config/defaultSettings';
 
 const {

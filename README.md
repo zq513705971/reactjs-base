@@ -4,9 +4,9 @@
 
 该模板为华讯信息系统 react 版本各平台的开发模板。各平台在开发过程中，以该模板为基础进行模块页面的开发。
 
-使用该模板时，须结合 eccom-framework 库进行使用，该库包含界面布局、默认配置以及其他通用的工具。
+使用该模板时，须结合 `eccom-framework-web` 库进行使用，该库包含界面布局、默认配置以及其他通用的工具。
 
-组件库地址：[eccom-framework](http://192.168.246.162/erpcloudnet/ui/eccom-framework.git)
+组件库地址：[eccom-framework-web](http://192.168.246.162/erpcloudnet/ui/eccom-framework-web.git)
 
 ## 二、开发规范
 
@@ -39,7 +39,7 @@
 
 ```
 # 下载项目模板
-git clone http://192.168.246.162/erpcloudnet/ui/eccom-template.git eccom-project
+git clone http://192.168.246.162/erpcloudnet/ui/eccom-template-web.git eccom-project
 # 删除远程仓库地址
 cd eccom-project
 git remote rm origin
@@ -51,7 +51,7 @@ git remote add origin http://192.168.246.162/erpcloudnet/ui/eccom-project.git
 
 ```
 # 组件库
-git clone http://192.168.246.162/erpcloudnet/ui/eccom-framework.git
+git clone http://192.168.246.162/erpcloudnet/ui/eccom-framework-web.git
 ```
 
 `eccom-project`为项目名称
@@ -61,8 +61,8 @@ git clone http://192.168.246.162/erpcloudnet/ui/eccom-framework.git
 > 创建组件库链接
 
 ```
-# 进入项目eccom-framework
-cd eccom-framework
+# 进入项目eccom-framework-web
+cd eccom-framework-web
 # 安装依赖
 yarn
 # 或者
@@ -81,7 +81,7 @@ yarn
 # 或者
 npm install
 # 链接组件库
-yarn link 'eccom-framework'
+yarn link 'eccom-framework-web'
 ```
 
 > 运行 eccom-project
@@ -119,7 +119,7 @@ import module1Routes from '@/pages/module1/routes.config';
 
 #### 2.3.3 界面布局
 
-`eccom-framework`提供多种形式的界面布局，包括宽版/窄版（固定综合导航栏/弹出式综合导航栏）
+`eccom-framework-web`提供多种形式的界面布局，包括宽版/窄版（固定综合导航栏/弹出式综合导航栏）
 
 使用方法：
 
@@ -156,8 +156,10 @@ import module1Routes from '@/pages/module1/routes.config';
 
 各平台特有的组件定义，需将组件定义存放在`src/components`中，其中要求如下：
 
-> common 公共的无法提取到 eccom-framework 库中的组件
+> `common` 公共的无法提取到 eccom-framework-web 库中的组件
 
-> pages 页面各模块组件和配置，包括各模块的权限配置参数等
+> `pages` 页面各模块组件和配置，包括各模块的权限配置参数等
 
-其他各平台可通用的组件，需提取到`eccom-framework`组件库中。
+> 组件名称定义，首字母必须为大写
+
+其他各平台可通用的组件，依据实际情况提取到`eccom-framework-web`组件库中。

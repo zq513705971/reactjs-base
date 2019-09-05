@@ -1,15 +1,15 @@
-import { Utils } from 'eccom-framework';
+import { Utils } from 'eccom-framework-web';
 
 const { http } = Utils;
 
 export async function logoutCurrent() {
-    return http.post('/api/auth/jwt/user/logout');
+  return http.post('/api/auth/jwt/user/logout');
 }
 
 export async function queryCurrent() {
-    return http.get('/api/auth/jwt/user/currentUser');
+  return http.get('/api/auth/jwt/user/currentUser');
 }
 
 export async function refreshToken() {
-    return http.post('/api/auth/jwt/user/refreshToken');
+  return http.post('/api/auth/jwt/user/refreshToken');
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'dva';
 import { formatMessage } from 'umi-plugin-react/locale';
-import { Utils } from 'eccom-framework';
+import { Utils } from 'eccom-framework-web';
 import routesConfig from '../../config/routes.config';
 import defaultSettings from '../../config/defaultSettings';
 

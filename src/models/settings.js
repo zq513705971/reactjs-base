@@ -1,4 +1,4 @@
-import { Models } from 'eccom-framework';
+import { Models } from 'eccom-framework-web';
 
 const { getSettings } = Models;
 
