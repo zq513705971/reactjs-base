@@ -6,7 +6,7 @@
 
 使用该模板时，须结合 `eccom-framework-web` 库进行使用，该库包含界面布局、默认配置以及其他通用的工具。
 
-组件库地址：[eccom-framework-web](http://192.168.246.162/erpcloudnet/ui/eccom-framework-web.git)
+组件库地址：[eccom-framework-web](http://192.168.246.162/erpdev/ui/eccom-framework-web.git)
 
 ## 二、开发规范
 
@@ -39,12 +39,12 @@
 
 ```
 # 下载项目模板
-git clone http://192.168.246.162/erpcloudnet/ui/eccom-template-web.git eccom-project
+git clone http://192.168.246.162/erpdev/ui/eccom-template-web.git eccom-project
 # 删除远程仓库地址
 cd eccom-project
 git remote rm origin
 # 添加新的远程仓库地址
-git remote add origin http://192.168.246.162/erpcloudnet/ui/eccom-project.git
+git remote add origin http://192.168.246.162/erpdev/ui/eccom-project.git
 ```
 
 > 组件库
