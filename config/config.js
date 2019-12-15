@@ -18,7 +18,7 @@ const plugins = [
         baseNavigator: true,
       },
       dynamicImport: {
-        loadingComponent: './components/common/PageLoading/index',
+        loadingComponent: './components/PageLoading/index',
         webpackChunkName: true,
         level: 3,
       },
@@ -92,16 +92,6 @@ export default {
       target: 'http://172.30.8.12:9010/api/auth/',
       changeOrigin: true,
       pathRewrite: { '^/api/auth': '' },
-    },
-    '/api/hr/': {
-      target: 'http://172.30.8.12:9010/api/hr/',
-      changeOrigin: true,
-      pathRewrite: { '^/api/hr': '' },
-    },
-    '/api/qm/': {
-      target: 'http://172.30.8.12:9010/api/qm/',
-      changeOrigin: true,
-      pathRewrite: { '^/api/qm': '' },
     },
   },
 };

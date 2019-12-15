@@ -1,16 +1,11 @@
-import { Utils } from 'eccom-framework-web';
-const { utils } = Utils;
-
 const env = process.env.API_ENV || 'local';
 let configs = undefined;
 switch (env) {
   case 'dev':
     configs = require('./env/dev');
-    utils.log('configs', configs);
     break;
   case 'local':
     configs = require('./env/local');
-    utils.log('configs', configs);
     break;
   case 'pro':
     configs = require('./env/pro');

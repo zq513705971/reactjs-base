@@ -1,7 +1,15 @@
-import { Models } from 'eccom-framework-web';
+import { withCookies, Cookies, useCookies } from 'react-cookie';
+import { accountLogin, queryCurrent, logoutCurrent, refreshToken } from '../services/user';
+import { message, notification } from 'antd';
+import { routerRedux } from 'dva/router';
 
-const { getSettings } = Models;
+const cookies = new Cookies();
 
-const settings = getSettings();
+export default {
+  namespace: 'settings',
+  state: {},
 
-export default settings;
+  effects: {},
+
+  reducers: {},
+};

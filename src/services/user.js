@@ -1,15 +1,9 @@
-import { Utils } from 'eccom-framework-web';
+import http from '@/utils/http';
 
-const { http } = Utils;
+export async function doLogin(payload) {
+  return http.post('/api/auth/jwt/user/logout', payload);
+}
 
 export async function logoutCurrent() {
   return http.post('/api/auth/jwt/user/logout');
-}
-
-export async function queryCurrent() {
-  return http.get('/api/auth/jwt/user/currentUser');
-}
-
-export async function refreshToken() {
-  return http.post('/api/auth/jwt/user/refreshToken');
 }

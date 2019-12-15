@@ -1,7 +1,17 @@
-import module1Routes from '@/pages/module1/routes.config';
-import module2Routes from '@/pages/module2/routes.config';
-
 let routes = [
+  {
+    path: '/user',
+    component: '../layouts/UserLayout',
+    routes: [
+      { path: '/', redirect: '/user/login' },
+      {
+        path: '/user/login',
+        name: 'welcome',
+        icon: 'smile',
+        component: './Login',
+      },
+    ],
+  },
   {
     path: '/',
     component: '../layouts/BasicLayout',
@@ -13,8 +23,6 @@ let routes = [
         icon: 'smile',
         component: './Welcome',
       },
-      ...module1Routes,
-      ...module2Routes
     ],
   },
   {
