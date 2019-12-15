@@ -21,7 +21,8 @@
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "prettier": "prettier -c --write **/*"
   },
-  "husky": {
+  "husky": {},
+  "huskyX": {
     "hooks": {
       "pre-commit": "npm run lint-staged"
     }
