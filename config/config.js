@@ -88,10 +88,15 @@ export default {
   },
   chainWebpack: webpackPlugin,
   proxy: {
-    '/api/auth/': {
-      target: 'http://172.30.8.12:9010/api/auth/',
+    '/admin/api/': {
+      target: 'http://127.0.0.1:8080/store/admin/api/',
       changeOrigin: true,
-      pathRewrite: { '^/api/auth': '' },
+      pathRewrite: { '^/admin/api/': '' },
+    },
+    '/public/account/': {
+      target: 'http://127.0.0.1:8080/store/public/account/',
+      changeOrigin: true,
+      pathRewrite: { '^/public/account/': '' },
     },
   },
 };

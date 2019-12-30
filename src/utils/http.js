@@ -26,8 +26,6 @@ const codeMessage = {
   502: '网关错误。',
   503: '服务不可用，服务器暂时过载或维护。',
   504: '网关超时。',
-  40101: 'User Token Forbidden or Expired!',
-  40301: 'User Token Forbidden or Expired!',
 };
 
 /**
@@ -51,24 +49,6 @@ const request = extend({
   errorHandler, // 默认错误处理
   // credentials: 'include', // 默认请求是否带上cookie
 });
-request.interceptors.response.use(async response => {
-  const { url } = response;
-  const res = await response.clone().json();
-
-  if (res.status !== 200) {
-    return new Response(response.body, {
-      status: 500,
-      statusText: codeMessage[res.status],
-      url: response.url,
-      headers: response.headers,
-    });
-  }
-  return new Response(response.body, {
-    status: 200,
-    statusText: 'ok',
-    headers: response.headers,
-  });
-});
 
 /**
  * http post
@@ -78,16 +58,29 @@ request.interceptors.response.use(async response => {
  */
 const post = (url, params = {}, headers = {}) => {
   const token = cookies.get('TOKEN_KEY');
-
   return request(url, {
     method: 'POST',
     data: params,
+    requestType: 'form',
     headers: {
-      Authorization: token,
-      ...headers,
-    },
+      token: token,
+      ...headers
+    }
   });
-};
+}
+
+const postBody = (url, body, headers) => {
+  const token = cookies.get('TOKEN_KEY');
+  return request(url, {
+    method: 'POST',
+    body: body,
+    requestType: 'form',
+    headers: {
+      token: token,
+      ...headers
+    }
+  });
+}
 
 /**
  * http get
@@ -105,10 +98,10 @@ const get = (url, params, headers) => {
   return request(newUrl, {
     method: 'GET',
     headers: {
-      Authorization: token,
+      token: token,
       ...headers,
     },
   });
 };
 
-export default { request, post, get };
+export default { request, post, postBody, get };
